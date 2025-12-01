@@ -164,18 +164,19 @@ These engines MUST use static credentials + TLS:
 
 #  Engine Compatibility Matrix
 
-| Engine              | IAM Auth | RDS Proxy | Secrets Manager |
-|---------------------|----------|-----------|-----------------|
-| MySQL               | ✔        | ✔         | Optional        |
-| PostgreSQL          | ✔        | ✔         | Optional        |
-| Aurora MySQL        | ✔        | ✔         | Optional        |
-| Aurora PostgreSQL   | ✔        | ✔         | Optional        |
-| Aurora Serverless v2| ✔        | ✔         | Optional        |
-| Aurora Serverless v1| ❌       | ❌        | ✔ Required      |
-| SQL Server          | ❌       | ❌        | ✔ Required      |
-| Oracle              | ❌       | ❌        | ✔ Required      |
-| MariaDB             | ❌       | ❌        | ✔ Required      |
-| RDS Custom          | ❌       | ❌        | ✔ Required      |
+|Engine           |   IAM  | Proxy |  Secrets   | Multi-AZ                |
+|-----------------|--------|-------|------------|----------------------- -|
+|MySQL            |   ✔   |  ✔    |   Optional | ✔                       |
+|PostgreSQL       |   ✔   |  ✔    |   Optional | ✔                       |
+|Aurora MySQL     |   ✔   |  ✔    |   Optional | ✔ (via Aurora storage)  |
+|Aurora PG        |   ✔   |  ✔    |   Optional | ✔ (via Aurora storage)  |
+|A. Srv v2        |   ✔   |  ✔    |   Optional | ✔ (via Aurora storage)  |
+|A. Srv v1        |   ✖   |  ✖    |   ✔       |  ✖  (no HA standby)     |
+|SQL Server       |   ✖   |  ✖    |   ✔       |  ✔  (edition-dependent) |
+|Oracle           |   ✖   |  ✖    |   ✔       |  ✔  (Data Guard)        |
+|MariaDB          |   ✖   |  ✖    |   ✔       |  ✔                      |
+|RDS Custom       |   ✖   |  ✖    |   ✔       |  ✖  (no Multi-AZ)       |
+
 
 ---
 
