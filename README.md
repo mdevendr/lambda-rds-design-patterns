@@ -26,7 +26,7 @@ This repo is intended for Cloud Architects, Serverless Engineers, and teams oper
 
 > **AWS Lambda → RDS Secure Design Patterns Architecture**
 
-<img width="7408" height="3428" alt="architecture" src="https://github.com/user-attachments/assets/dd2d95e6-7bd2-4d6c-9e21-4c721aafbcdb" />
+<img width="7408" height="3428" alt="architecture" src="https://github.com/user-attachments/assets/a5365636-3b39-4f96-a1d4-13d71f9b3a7c" />
 
 
 ---
