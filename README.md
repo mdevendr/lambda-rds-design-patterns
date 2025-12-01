@@ -161,21 +161,23 @@ These engines MUST use static credentials + TLS:
 **This is the only secure choice for these engines.**
 
 ---
+## Engine Compatibility Matrix
 
-#  Engine Compatibility Matrix
+| Engine          | IAM | Proxy | Secrets  | Multi-AZ                     |
+|-----------------|-----|-------|----------|------------------------------|
+| MySQL           | ✔   | ✔     | Optional | ✔                            |
+| PostgreSQL      | ✔   | ✔     | Optional | ✔                            |
+| Aurora MySQL    | ✔   | ✔     | Optional | ✔ (via Aurora storage)       |
+| Aurora PG       | ✔   | ✔     | Optional | ✔ (via Aurora storage)       |
+| A. Srv v2       | ✔   | ✔     | Optional | ✔ (via Aurora storage)       |
+| A. Srv v1       | ✖   | ✖     | ✔        | ✖ (no HA standby)            |
+| SQL Server      | ✖   | ✖     | ✔        | ✔ (edition-dependent)        |
+| Oracle          | ✖   | ✖     | ✔        | ✔ (Data Guard)               |
+| MariaDB         | ✖   | ✖     | ✔        | ✔                            |
+| RDS Custom      | ✖   | ✖     | ✔        | ✖ (no Multi-AZ)              |
 
-|Engine           |   IAM  | Proxy |  Secrets   | Multi-AZ                |
-|-----------------|--------|-------|------------|----------------------- -|
-|MySQL            |   ✔   |  ✔    |   Optional | ✔                       |
-|PostgreSQL       |   ✔   |  ✔    |   Optional | ✔                       |
-|Aurora MySQL     |   ✔   |  ✔    |   Optional | ✔ (via Aurora storage)  |
-|Aurora PG        |   ✔   |  ✔    |   Optional | ✔ (via Aurora storage)  |
-|A. Srv v2        |   ✔   |  ✔    |   Optional | ✔ (via Aurora storage)  |
-|A. Srv v1        |   ✖   |  ✖    |   ✔       |  ✖  (no HA standby)     |
-|SQL Server       |   ✖   |  ✖    |   ✔       |  ✔  (edition-dependent) |
-|Oracle           |   ✖   |  ✖    |   ✔       |  ✔  (Data Guard)        |
-|MariaDB          |   ✖   |  ✖    |   ✔       |  ✔                      |
-|RDS Custom       |   ✖   |  ✖    |   ✔       |  ✖  (no Multi-AZ)       |
+
+
 
 
 ---
